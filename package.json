@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Jean Bonilha <jeanbonilha.webdev@gmail.com> (https://github.com/jean-bonilha)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
