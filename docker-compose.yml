@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mypharma-app:
+    build: .
+    image: mypharma-app
+    environment:
+      - MONGODB_URL=${MONGODB_URL}
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - mypharma-network
+
+  mongodb:
+    image: mongo:4.2.19-bionic
+    ports:
+      - '27018:27017'
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - mypharma-network
+
+volumes:
+  dbdata:
+
+networks:
+  mypharma-network:
+    driver: bridge
