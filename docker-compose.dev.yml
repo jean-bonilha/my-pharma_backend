@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  mypharma-app:
+    container_name: mypharma-app-dev
+    command: yarn dev -L

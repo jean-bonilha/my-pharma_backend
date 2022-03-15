@@ -4,6 +4,7 @@ services:
   mypharma-app:
     build: .
     image: mypharma-app
+    command: yarn start
     environment:
       - MONGODB_URL=${MONGODB_URL}
     ports:
